@@ -12,7 +12,11 @@ $uriPath = parse_url($uri, PHP_URL_PATH);
 $routes = require 'routes.php';
 
 // Определяем класс для вывода данных.
-// Изменить тип результата на html можно с помощью $view = new ViewHtml();
-$view = new ViewNumber();
+// Изменить вывод данных на html можно с помощью заголовка Accept: text/html;
+// По умолчанию просто число
+$headers = getallheaders();
+$accept = HeaderParser::getAccept($headers);
+$view = ViewFactory::getView($accept);
+
 // Запускаем маршрутизатор
 Router::work($uri, $routes, $view);
