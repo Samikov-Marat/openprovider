@@ -13,7 +13,8 @@ abstract class BaseView
      * @param $data
      * @return $this
      */
-    public function prepare(string $key, $data){
+    public function prepare(string $key, $data)
+    {
         $this->data[$key] = $data;
         // Для java-подобного последовательного вызова функций
         return $this;

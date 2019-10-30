@@ -18,5 +18,4 @@ class Controller extends BaseController
         $random = RandomGenerator::getValue($id);
         $this->view->prepare('random', $random)->flush();
     }
-
 }

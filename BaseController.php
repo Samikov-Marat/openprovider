@@ -6,9 +6,9 @@
 abstract class BaseController
 {
     protected $view;
+
     public function __construct(BaseView $view)
     {
         $this->view = $view;
     }
-
 }

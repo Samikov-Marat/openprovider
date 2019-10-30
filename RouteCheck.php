@@ -21,5 +21,4 @@ class RouteCheck
     {
         return $this->params;
     }
-
 }
