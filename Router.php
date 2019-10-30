@@ -16,6 +16,7 @@ class Router
                 $controller = new $methodPath[0]($view);
                 $method = $methodPath[1];
                 call_user_func_array(array($controller, $method), $routeCheck->getParams());
+                break;
             }
         }
 
